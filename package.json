@@ -8,8 +8,9 @@
   ],
   "module": "lib/main.js",
   "scripts": {
-    "test": "npm run test-node",
-    "test-node": "cross-env NODE_ENV=test mocha -r esm --preserve-symlinks -t 10000 tests/test.js",
+    "test": "npm run lint && npm run test-node && npm run test-karma",
+    "test-karma": "karma start karma.conf.js",
+    "test-node": "cross-env NODE_ENV=test mocha -r esm --preserve-symlinks -t 10000 --require test/test-mocha.js test/*.spec.js",
     "lint": "eslint . --fix"
   },
   "repository": {
@@ -39,8 +40,8 @@
   "dependencies": {
     "esm": "^3.2.25",
     "@sphereon/rn-jsonld-signatures": "^9.3.1-0",
-    "@sphereon/rn-jws-linked-data-signature": "https://github.com/Sphereon-Opensource/rn-jws-linked-data-signature.git",
-    "@sphereon/rn-ecdsa-secp256k1-verification-key-2019": "https://github.com/Sphereon-Opensource/rn-ecdsa-secp256k1-verification-key-2019.git"
+    "@sphereon/rn-jws-linked-data-signature": "https://github.com/Sphereon-Opensource/rn-jws-linked-data-signature.git#master",
+    "@sphereon/rn-ecdsa-secp256k1-verification-key-2019": "https://github.com/Sphereon-Opensource/rn-ecdsa-secp256k1-verification-key-2019.git#master"
   },
   "devDependencies": {
     "chai": "^4.2.0",
@@ -59,11 +60,12 @@
     "mocha": "^8.1.1",
     "mocha-lcov-reporter": "^1.3.0",
     "nyc": "^15.1.0",
-    "webpack": "^5.31.2"
+    "webpack": "^5.31.2",
+    "webpack-cli": "^4.8.0"
   },
   "browser": {
-    "crypto": false,
-    "bs58": false,
+    "crypto": true,
+    "bs58": true,
     "base64url": false
   }
 }
