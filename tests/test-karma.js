@@ -31,11 +31,11 @@ require('core-js/fn/symbol');
 
 const assert = require('chai').assert;
 const common = require('./test-common');
-const constants = require('jsonld-signatures/lib/constants');
-const jsigs = require('jsonld-signatures');
+const constants = require('@sphereon/rn-jsonld-signatures/lib/constants');
+const jsigs = require('@sphereon/rn-jsonld-signatures');
 const mock = require('./mock/mock');
 const Suite = require('../dist/ecdsa-secp256k1-signature-2019');
-const util = require('jsonld-signatures/lib/util');
+const util = require('@sphereon/rn-jsonld-signatures/lib/util');
 
 const options = {
   assert,

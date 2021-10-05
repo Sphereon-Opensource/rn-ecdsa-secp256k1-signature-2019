@@ -24,11 +24,11 @@ if(!require('semver').gte(process.version, '8.6.0')) {
 const chai = require('chai');
 const assert = chai.assert;
 const common = require('./test-common');
-const jsigs = require('jsonld-signatures');
-const constants = require('jsonld-signatures/lib/constants');
+const jsigs = require('@sphereon/rn-jsonld-signatures');
+const constants = require('@sphereon/rn-jsonld-signatures/lib/constants');
 const Suite = require('..');
 const should = chai.should();
-const util = require('jsonld-signatures/lib/util');
+const util = require('@sphereon/rn-jsonld-signatures/lib/util');
 
 const options = {
   assert,

@@ -1,13 +1,13 @@
 {
-  "name": "ecdsa-secp256k1-signature-2019",
-  "version": "1.0.2-0",
-  "description": "Implementation of the EcdsaSecp256k1Signature2019 suite for jsonld-signatures.",
+  "name": "@sphereon/rn-ecdsa-secp256k1-signature-2019",
+  "version": "1.0.2-1",
+  "description": "Implementation of the EcdsaSecp256k1Signature2019 suite for jsonld-signatures create by Digital Bazar, forked by Sphereon for React-Native.",
   "main": "lib",
   "scripts": {
     "build": "npm run build-webpack",
     "build-webpack": "webpack",
     "test": "npm run test-node",
-    "test-node": "cross-env NODE_ENV=test mocha --delay -t 30000 -A -R ${REPORTER:-spec} tests/test.js",
+    "test-node": "cross-env NODE_ENV=test mocha --delay -t 30000 -A tests/test.js",
     "test-karma": "karma start"
   },
   "repository": {
@@ -32,8 +32,9 @@
   },
   "homepage": "https://github.com/digitalbazaar/ecdsa-secp256k1-signature-2019#readme",
   "dependencies": {
-    "jsonld-signatures": "^4.4.0",
-    "secp256k1-key-pair": "^1.0.0"
+    "@sphereon/rn-jsonld-signatures": "^9.3.1-0",
+    "@sphereon/rn-jws-linked-data-signature": "https://github.com/Sphereon-Opensource/rn-jws-linked-data-signature.git",
+    "@sphereon/rn-ecdsa-secp256k1-verification-key-2019": "https://github.com/Sphereon-Opensource/rn-ecdsa-secp256k1-verification-key-2019.git"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
