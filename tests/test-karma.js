@@ -8,7 +8,7 @@
  * Output an EARL report:
  *   EARL=filename
  * Bail with tests fail:
- *   BAIL=true
+ *   BAIL=true.
  *
  * Copyright (c) 2011-2018 Digital Bazaar, Inc. All rights reserved.
  */

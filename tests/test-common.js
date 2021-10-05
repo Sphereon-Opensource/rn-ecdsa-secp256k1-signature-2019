@@ -4,14 +4,16 @@
 /* eslint-disable indent */
 'use strict';
 
+const {EcdsaSecp256k1Signature2019} = require(
+  '../lib/EcdsaSepc256k1Signature2019');
 module.exports = async function({
-  assert, constants, jsigs, mock, Suite, should
+  should
 }) {
 
 // run tests
 describe('EcdsaSecp256k1Signature2019', () => {
   it('constructor works', async () => {
-    const s = new Suite();
+    const s = new EcdsaSecp256k1Signature2019();
     s.should.be.an('object');
     should.exist(s.type);
     s.type.should.equal('EcdsaSecp256k1Signature2019');
